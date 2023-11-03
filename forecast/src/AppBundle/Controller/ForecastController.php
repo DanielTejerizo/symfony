@@ -2,6 +2,10 @@
 
 namespace AppBundle\Controller;
 
-class ForecastController
+class ForecastController 
 {
+    public function indexAction()
+    {
+        return new Response('It/s freezing cold');
+    }
 }
