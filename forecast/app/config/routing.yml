@@ -1,3 +1,6 @@
-app:
-    path: "/forecast"
-    defaults: {_controller: AppBundle:Forecast:index}
+forecast_simple:
+    path: "/forecast/index"
+    defaults: {_controller: AppBundle:Forecast:indexParam}
+forecast_param:
+    path: "/forecast/{weather}"
+    defaults: {_controller: AppBundle:Forecast:indexParam}

@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ForecastController extends Controller
 {
-    public function indexAction(){
-        return new Response('Hace frio');
+    public function indexParamAction($weather){
+        return new Response('<html><body>Weather info: Esta '.$weather.'</body></html');
     }
 }
