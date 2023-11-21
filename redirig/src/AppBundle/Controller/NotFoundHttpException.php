@@ -7,12 +7,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class RedirectController extends Controller{
+class NotFoundHttpException extends Controller{
 
-    public function internalRedirectAction(){
-        return $this->redirect("http://google.es");
+    public function getAction($id){
+        if ($id == null || $id != 1){
+            throw $this->createNotFoundException('No existe');
+        }else{
+            return new Response("Registro " .$id);
     }
 
 }
-
-
+}

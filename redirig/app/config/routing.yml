@@ -1,3 +1,7 @@
 redirect_index:
     path: "/redirect/index"
     defaults: {_controller: AppBundle:Redirect:internalRedirect}
+
+get_temp:
+    path: "/temperature/{id}"
+    defaults: {_controller: AppBundle:Temperature:get}
