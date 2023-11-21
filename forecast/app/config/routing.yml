@@ -1,6 +1,9 @@
 forecast_simple:
     path: "/forecast/index"
     defaults: {_controller: AppBundle:Forecast:indexParam}
+forecast_request_param:
+    path: "/forecast/indexRequest/{weather}/{temperature}"
+    defaults: {_controller: AppBundle:Forecast:indexRequest, weather: cloudy, temperature: 15}
 forecast_2_params:
     path: "/forecast/{weather}/{temperature}"
     defaults: {_controller: AppBundle:Forecast:indexParams, weather: cloudy, temperature: 15}
