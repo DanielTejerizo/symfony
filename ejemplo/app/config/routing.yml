@@ -1,3 +1,16 @@
-app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
+forecast_route:
+    path: /ejemplo/forecast
+    defaults: {_controller: AppBundle:Forecast:index}
+
+//Sesiones
+session_controller:
+    path:      /session
+    defaults: {_controller: AppBundle\Controller\SessionController::setSessionData}
+
+get_session_data:
+    path:      /session/get
+    controller: AppBundle\Controller\SessionController::getSessionData
+
+remove_session_data:
+    path:      /session/remove
+    controller: AppBundle\Controller\SessionController::removeSessionData
