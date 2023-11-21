@@ -7,3 +7,6 @@ forecast_request_param:
 forecast_2_params:
     path: "/forecast/{weather}/{temperature}"
     defaults: {_controller: AppBundle:Forecast:indexParams, weather: cloudy, temperature: 15}
+get_temp:
+    path: "/temperature/{id}"
+    defaults: {_controller: AppBundle:Temperature:get}
