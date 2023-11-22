@@ -1,3 +1,19 @@
-app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
+# app/config/routing/exam_routes.yml
+forecast_request_param:
+    path: "/forecast/indexRequest/{weather}/{temperature}"
+    defaults: {_controller: AppBundle:Exam:indexRequest, weather: cloudy, temperature: 30}
+
+# app/config/routing/operaciones_routes.yml
+sum:
+    path: "/sumar/{num1}/{num2}"
+    defaults: {_controller: AppBundle:Operaciones:sumar}
+    requirements:
+        num1: "[0-9]+"
+        num2: "[0-9]+"
+
+res:
+    path: "/restar/{num1}/{num2}"
+    defaults: {_controller: AppBundle:Operaciones:restar}
+    requirements:
+        num1: "[0-9]+"
+        num2: "[0-9]+"
