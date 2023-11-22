@@ -1,0 +1,5 @@
+error:
+    path: /error/{id}
+    defaults: {_controller: AppBundle:Error:get}
+    requirements:
+        id: "[0-9]+"
